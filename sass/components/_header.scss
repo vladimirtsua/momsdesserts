@@ -1,0 +1,23 @@
+.header {
+  background-image: url(../img/logo_png.jpg);
+  width: 300px;
+  display: flex;
+  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid pink;
+  background-color: pink;
+  margin-right: auto;
+  margin-left: auto;
+
+  //   @include for-size(phone) {
+  //   }
+}
+.header_social_menu {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+}

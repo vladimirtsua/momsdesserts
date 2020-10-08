@@ -1,0 +1,60 @@
+:root {
+  --section-color: #fdb3ce;
+  --text-color: #47051d;
+  --main-color: #22030e;
+}
+body {
+  font-family: 'Courgette', cursive;
+  font-family: 'Lobster Two', cursive;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.conteiner {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin for-size($range) {
+  $phone: 480px;
+  $tablet: 768px;
+  $desktop: 1200px;
+
+  @if $range == phone-only {
+    @media (max-width: #{$phone - 1} ) {
+      @content;
+    }
+  } @else if $range == phone {
+    @media (min-width: $phone) {
+      @content;
+    }
+  } @else if $range == tablet {
+    @media (min-width: $tablet) {
+      @content;
+    }
+  } @else if $range == desktop {
+    @media (min-width: $desktop) {
+      @content;
+    }
+  }
+}
